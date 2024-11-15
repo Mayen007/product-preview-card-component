@@ -5,31 +5,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Frontend Mentor | Product Preview Card</title>
+  <!-- Link to external CSS file -->
   <link rel="stylesheet" href="./styles.css">
+  <!-- Favicon -->
   <link rel="shortcut icon" href="./assets/images/favicon-32x32.png" type="image/x-icon">
 </head>
 
 <body>
   <main>
     <section class="container">
-      <img src="./assets/images/image-product-desktop.jpg" alt="Product Preview Card" class="image" loading="lazy">
+      <!-- Desktop image -->
+      <img src="./assets/images/image-product-desktop.jpg" alt="Product image for desktop view" class="desktop-image" loading="lazy">
+      <!-- Mobile image -->
+      <img src="./assets/images/image-product-mobile.jpg" alt="Product image for mobile view" class="mobile-image" loading="lazy">
       <div class="card">
+        <!-- Product category -->
         <h3 class="card-category">Perfume</h3>
+        <!-- Product title -->
         <h2 class="card-title">Gabrielle Essence Eau De Parfum</h2>
+        <!-- Product description -->
         <p class="card-text">A floral, solar and voluptuous interpretation composed by Olivier Polge,
           Perfumer-Creator for the House of CHANEL.</p>
+        <!-- Product price -->
         <p class="card-price"><span class="current-price">$149.99</span><span class="old-price">$169.99</span></p>
-
+        <!-- Add to Cart button -->
         <button class="card-button" type="button"><img src="./assets/images/icon-cart.svg" alt="">Add to Cart</button>
-
       </div>
     </section>
   </main>
   <footer>
     <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener">Frontend
+      <!-- Attribution links -->
+      Challenge by <a href="https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa" target="_blank" rel="noopener">Frontend
         Mentor</a>.
-      Coded by <a href="https://github.com/Mayen007/" target="_blank" rel="noopener">Mayen007</a>.
+      Coded by <a href="https://github.com/Mayen007/" target="_blank" rel="noopener noreferrer">Mayen007</a>.
     </div>
   </footer>
 </body>

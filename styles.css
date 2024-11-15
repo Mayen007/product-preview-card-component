@@ -1,15 +1,16 @@
 :root {
-  /* Primary */
+  /* Primary Colors */
   --dark-cyan: hsl(158, 36%, 37%);
   --dark-cyan-hover: hsl(158, 36%, 27%);
   --cream: hsl(30, 38%, 92%);
 
-  /* Neutral */
+  /* Neutral Colors */
   --very-dark-blue: hsl(212, 21%, 14%);
   --dark-grayish-blue: hsl(228, 12%, 48%);
   --white: hsl(0, 0%, 100%);
 }
 
+/* Font Faces */
 @font-face {
   font-family: 'Fraunces-Italic';
   src: url('./assets/fonts/Fraunces/static/Fraunces_144pt_Soft-Black.ttf') format('truetype');
@@ -45,6 +46,7 @@
   font-style: normal;
 }
 
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -53,7 +55,7 @@
 
 body {
   font-family: 'Montserrat-Regular', sans-serif;
-  background-color: var(--cream);
+  background-color: var(--cream) !important;
   color: var(--dark-grayish-blue);
 }
 
@@ -61,6 +63,7 @@ p {
   font-size: 14px;
 }
 
+/* Container Styles */
 .container {
   display: flex;
   align-items: center;
@@ -74,9 +77,9 @@ p {
   background-color: var(--white);
   gap: 1rem;
   border-radius: 0.5rem;
-  background-color: var(--white);
 }
 
+/* Card Styles */
 .card {
   width: 50%;
   height: 100%;
@@ -85,33 +88,38 @@ p {
   flex-direction: column;
 }
 
-.card img {
+/* Image Styles */
+.desktop-image {
   width: 50%;
   height: 100%;
   object-fit: cover;
 }
 
-.image {
-  width: 50%;
-  height: 100%;
-  object-fit: cover;
+.desktop-image {
+  display: none;
 }
 
+.mobile-image {
+  display: block;
+  width: 100%;
+}
+
+/* Card Text Styles */
 .card-category {
   font-family: 'Montserrat-Regular', sans-serif;
   font-size: 1rem;
   text-transform: uppercase;
   color: var(--dark-grayish-blue);
-  letter-spacing: 5.5px;
-  opacity: 0.5;
+  letter-spacing: 6px;
+  opacity: 0.8;
 }
 
 .card-title {
-  font-family: 'Fraunces-Italic', sans-serif;
+  font-family: 'Fraunces-Italic';
   font-size: 2.6rem;
   color: var(--very-dark-blue);
   margin-bottom: 10px;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .card-price {
@@ -134,6 +142,7 @@ p {
   text-decoration: line-through;
 }
 
+/* Button Styles */
 .card-button {
   background-color: var(--dark-cyan);
   color: var(--white);
@@ -146,7 +155,7 @@ p {
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
-  font-family: 'Fraunces-Bold', sans-serif;
+  font-family: 'Fraunces-Bold';
   font-size: 1rem;
   transition: background-color 0.3s;
   margin-top: 20px;
@@ -162,6 +171,7 @@ p {
   margin-left: 0.5rem;
 }
 
+/* Attribution Styles */
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -175,12 +185,14 @@ p {
   text-decoration: none;
 }
 
+/* Media Queries */
 @media (max-width: 768px) {
   .container {
     width: 90%;
     flex-direction: column;
   }
-  .card-title{
+
+  .card-title {
     font-size: 2rem;
   }
 
@@ -188,7 +200,7 @@ p {
     width: 100%;
   }
 
-  .image {
+  .desktop-image {
     width: 100%;
     height: auto;
   }
@@ -198,17 +210,20 @@ p {
   .container {
     display: flex;
     flex-direction: row;
-    max-width: 600px;
-    /* height: 410px; */
+    width: 600px;
   }
 
   .card {
     width: 50%;
   }
 
-  .image {
+  .desktop-image {
+    display: block;
     width: 50%;
     height: 100%;
   }
 
+  .mobile-image {
+    display: none;
+  }
 }
